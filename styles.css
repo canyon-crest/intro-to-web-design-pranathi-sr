@@ -1,10 +1,19 @@
 body {
     background-color: #ff98d1;
-    color: black;
+    color: #5c0063;
     font-family:Arial, Helvetica, sans-serif;
+    margin:0
+}
+#container{
+    width: 800px;
+    margin: 0 auto;
+    background-color: #f85eb3;
+    padding: 40px;
+    border-left: #000 solid 4px;
+    border-right: #000 solid 4px;
 }
 h1{
-    background-color: black;
+    background-color: #5c0063;
     border: #fff, solid, 3px;
     color: #fff;
     border-radius: 15px;
@@ -12,4 +21,76 @@ h1{
     width: 50%;
     text-align: center;
     margin: 0px auto;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+h2{
+    text-align: center;
+    font-size: 1.2em;
+    font-style: italic;
+}
+h3{
+    border-left: double 20px rgb(255, 255, 255);
+    border-radius: 30px;
+    padding-left: 15px;
+}
+p{
+    line-height: 2.2em;
+}
+img{
+    float: left;
+    width: 300px;
+    border: #fff solid 3px;
+    border-radius: 15px;
+    margin-right: 20px;
+}
+/*PSEUDO SELECTORS*/
+a:link{
+    color:aqua;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:visited{
+    color: rgb(5, 104, 104);
+}
+a:hover{
+    color:rgb(5, 160, 59);
+    text-decoration: underline;
+}
+a:active{
+    color:blueviolet;
+}
+h3:hover{
+    border-color: red;
+}
+/*ID RULES */
+#pic1{
+    width: 200px;
+}
+#pic2{
+    width:200px;
+    float: right;
+    margin-right: 0;
+    margin-left: 20px;
+}
+#p2{
+    border: white dotted 2px;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: rgb(160, 1, 128);
+    color: white;
+}
+#pic3{
+    width:200px;
+    float: left;
+}
+/*CLASS RULE*/
+.highlight{
+    font-weight: bold;
+    background-color: #ffff00;
+    padding: 3px;
+    color: #000;
+    border-radius: 15px;
+}
+.highlight:hover{
+    background-color: rgb(255, 255, 155);
 }
