@@ -9,8 +9,8 @@ body {
     margin: 0 auto;
     background-color: #f85eb3;
     padding: 40px;
-    border-left: #000 solid 4px;
-    border-right: #000 solid 4px;
+    border-left: #5c0063 solid 2px;
+    border-right: #5c0063 solid 2px;
 }
 h1{
     background-color: #5c0063;
@@ -18,7 +18,7 @@ h1{
     color: #fff;
     border-radius: 15px;
     padding: 20px 20px 20px 20px;
-    width: 50%;
+    width: 90%;
     text-align: center;
     margin: 0px auto;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
