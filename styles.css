@@ -1,19 +1,19 @@
 body {
-    background-color: #ff98d1;
-    color: #5c0063;
+    background-color: #bb3e83;
+    color: #653269;
     font-family:Arial, Helvetica, sans-serif;
     margin:0
 }
 #container{
     width: 800px;
     margin: 0 auto;
-    background-color: #f85eb3;
+    background-color: #f8bdde;
     padding: 40px;
-    border-left: #5c0063 solid 2px;
-    border-right: #5c0063 solid 2px;
+    border-left: #d875df solid 3px;
+    border-right: #d875df solid 3px;
 }
 h1{
-    background-color: #5c0063;
+    background-color: #793c7e;
     border: #fff, solid, 3px;
     color: #fff;
     border-radius: 15px;
@@ -29,9 +29,10 @@ h2{
     font-style: italic;
 }
 h3{
-    border-left: double 20px rgb(255, 255, 255);
+    border-left: double 20px #653269;
     border-radius: 30px;
     padding-left: 15px;
+    font-family: cursive;
 }
 p{
     line-height: 2.2em;
@@ -39,28 +40,28 @@ p{
 img{
     float: left;
     width: 300px;
-    border: #fff solid 3px;
+    border: #ffe1f4 solid 3px;
     border-radius: 15px;
     margin-right: 20px;
 }
 /*PSEUDO SELECTORS*/
 a:link{
-    color:aqua;
+    color:rgb(255, 96, 228);
     text-decoration: none;
     font-weight: bold;
 }
 a:visited{
-    color: rgb(5, 104, 104);
+    color: rgb(243, 91, 142);
 }
 a:hover{
-    color:rgb(5, 160, 59);
+    color:rgb(103, 5, 160);
     text-decoration: underline;
 }
 a:active{
     color:blueviolet;
 }
 h3:hover{
-    border-color: red;
+    border-color: rgb(255, 78, 152);
 }
 /*ID RULES */
 #pic1{
@@ -76,21 +77,26 @@ h3:hover{
     border: white dotted 2px;
     border-radius: 15px;
     padding: 20px;
-    background-color: rgb(160, 1, 128);
-    color: white;
+    background-color: rgb(255, 180, 240);
 }
 #pic3{
-    width:200px;
+    width:300px;
     float: left;
+}
+#p3{
+    border:white dotted 2px;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #810551;
+    color: white;
 }
 /*CLASS RULE*/
 .highlight{
     font-weight: bold;
-    background-color: #ffff00;
+    background-color: rgb(206, 127, 209);
     padding: 3px;
-    color: #000;
     border-radius: 15px;
 }
 .highlight:hover{
-    background-color: rgb(255, 255, 155);
+    background-color: rgb(252, 152, 255);
 }
