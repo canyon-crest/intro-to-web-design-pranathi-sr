@@ -121,7 +121,7 @@ h3:hover{
 }
 @media (max-width: 1200px){
     #container{
-        background-color: rgb(137, 255, 255);
+        background-color: pink;
         width:800px;
     }
 }
@@ -153,9 +153,16 @@ p{
         display: none;
     }
     img,#pic1,#pic2,#pic3{
-        float:none;
+        float: center;
         border:none;
         width: 100%
+    }
+    h1{
+        color: #653269;
+        border-color: rgb(220, 105, 191);
+    }
+    p{
+        color: #653269;
     }
     h3{
         margin: 10px, auto;
