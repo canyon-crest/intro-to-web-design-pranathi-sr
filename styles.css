@@ -42,7 +42,6 @@ img{
     width: 300px;
     border: #ffe1f4 solid 3px;
     border-radius: 15px;
-    margin-right: 20px;
 }
 /*PSEUDO SELECTORS*/
 a:link{
@@ -66,20 +65,24 @@ h3:hover{
 /*ID RULES */
 #pic1{
     width: 200px;
+    margin-right: 20px;
 }
 #pic2{
     width:170px;
     float: right;
+    margin-left: 20px;
 }
 #p2{
     border: white dotted 2px;
     border-radius: 15px;
     padding: 30px;
+    padding-left: 30px;
     background-color: rgb(255, 180, 240);
 }
 #pic3{
     width:300px;
     float: left;
+    margin-right: 20px;
 }
 #p3{
     border:white dotted 2px;
@@ -151,9 +154,15 @@ p{
         display: none;
     }
     img,#pic1,#pic2,#pic3{
-        float: center;
         border:none;
-        width: 100%
+        width: 100%;
+        margin: none;
+    }
+    #p2, #p3{
+        border: none;
+        padding: none;
+        margin: none;
+        background: none;
     }
     h1{
         color: #653269;
