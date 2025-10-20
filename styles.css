@@ -68,15 +68,13 @@ h3:hover{
     width: 200px;
 }
 #pic2{
-    width:200px;
+    width:170px;
     float: right;
-    margin-right: 0;
-    margin-left: 20px;
 }
 #p2{
     border: white dotted 2px;
     border-radius: 15px;
-    padding: 20px;
+    padding: 30px;
     background-color: rgb(255, 180, 240);
 }
 #pic3{
