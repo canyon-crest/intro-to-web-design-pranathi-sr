@@ -1,14 +1,15 @@
 body {
     background-color: #bb3e83;
     color: #653269;
-    font-family:Arial, Helvetica, sans-serif;
-    margin:0
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
 }
 #container{
-    width: 1000px;
-    margin: 0 auto;
     background-color: #ffbde0;
+    width: 1000px;
     padding: 40px;
+    margin: 0 auto;
     border-left: #d875df solid 3px;
     border-right: #d875df solid 3px;
 }
@@ -61,15 +62,6 @@ h3{
     to {
         transform: translateX(0);
         opacity: 1;
-    }
-}
-
-/* Respect users who prefer reduced motion */
-@media (prefers-reduced-motion: reduce) {
-    #container h3 {
-        transform: none;
-        opacity: 1;
-        animation: none;
     }
 }
 
@@ -153,7 +145,23 @@ h3:hover{
     width:170px;
     float: right;
     margin-left: 20px;
+    will-change: opacity, transform;
+    animation: pic2Fade 4s ease-in-out infinite;
 }
+
+/* Composite fade (slight vertical move + subtle fade) */
+@keyframes pic2Fade {
+    0%   { opacity: 0.88; transform: translateY(0); }
+    50%  { opacity: 1;    transform: translateY(-6px); }
+    100% { opacity: 0.88; transform: translateY(0); }
+}
+
+/* Pause on hover/focus */
+#pic2:hover,
+#pic2:focus {
+    animation-play-state: paused;
+}
+
 #p2{
     border: white dotted 2px;
     border-radius: 15px;
