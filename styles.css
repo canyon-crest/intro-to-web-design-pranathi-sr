@@ -38,6 +38,47 @@ h3{
     width: 25%;
     font-family: Arial, Helvetica, sans-serif;
 }
+#container h3 {
+    transform: translateX(-40px);
+    opacity: 0;
+    animation: slideIn 600ms cubic-bezier(.2,.8,.2,1) forwards;
+    /* use a CSS variable for stagger; default 0 */
+    --i: 0;
+    animation-delay: calc(var(--i) * 120ms);
+}
+/* Stagger using nth-of-type (adjust if you add/remove h3s) */
+#container h3:nth-of-type(1) { --i: 0; }
+#container h3:nth-of-type(2) { --i: 1; }
+#container h3:nth-of-type(3) { --i: 2; }
+#container h3:nth-of-type(4) { --i: 3; }
+
+/* Keyframes */
+@keyframes slideIn {
+    from {
+        transform: translateX(-40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    #container h3 {
+        transform: none;
+        opacity: 1;
+        animation: none;
+    }
+}
+
+/* minimal layout tweaks (optional) */
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    line-height: 1.5;
+    padding: 16px;
+}
 p{
     line-height: 2.25em;
     font-family: Arial, Helvetica, sans-serif;
@@ -71,6 +112,37 @@ h3:hover{
 #pic1{
     width: 200px;
     margin-right: 20px;
+    will-change: transform, filter;
+    animation: pic1Composite 6s ease-in-out infinite;
+}
+@keyframes pic1Composite {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(1);
+        filter: drop-shadow(0 8px 6px rgba(0,0,0,0.25)) saturate(1);
+    }
+    25% {
+        transform: translateY(-8px) rotate(-3deg) scale(1.03);
+        filter: drop-shadow(0 12px 8px rgba(0,0,0,0.28)) saturate(1.05);
+    }
+    50% {
+        transform: translateY(0) rotate(0deg) scale(1);
+        filter: drop-shadow(0 8px 6px rgba(0,0,0,0.25)) saturate(1);
+    }
+    75% {
+        transform: translateY(6px) rotate(3deg) scale(0.98);
+        filter: drop-shadow(0 6px 4px rgba(0,0,0,0.22)) saturate(0.98);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg) scale(1);
+        filter: drop-shadow(0 8px 6px rgba(0,0,0,0.25)) saturate(1);
+    }
+}
+
+/* Pause the animation on hover/focus for better control */
+#pic1:hover,
+#pic1:focus {
+    animation-play-state: paused;
+    transform: translateY(-4px) rotate(-1deg) scale(1.04);
 }
 #p1{
     padding: 30px;
