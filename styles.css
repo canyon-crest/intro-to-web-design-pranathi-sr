@@ -7,15 +7,15 @@ body {
 }
 #container{
     background-color: #ffbde0;
-    width: 1000px;
     padding: 40px;
+    width: 1000px;
     margin: 0 auto;
     border-left: #d875df solid 3px;
     border-right: #d875df solid 3px;
 }
 h1{
     background-color: #a869ad;
-    border: #fff, solid, 3px;
+    border: px solid #fff;
     color: #fff;
     border-radius: 15px;
     padding: 20px 20px 20px 20px;
@@ -29,9 +29,10 @@ h2{
     font-size: 1.2em;
     font-style: italic;
 }
+
 h3{
     background-color: #a869ad;
-    border: 3px, solid, #f895ff;
+    border: 3px solid #f895ff;
     color: white;
     border-radius: 15px;
     padding: 10px;
@@ -173,6 +174,32 @@ h3:hover{
     width:300px;
     float: left;
     margin-right: 20px;
+    will-change: transform;
+    animation: pic3Bounce 3s cubic-bezier(.28,.84,.42,1) infinite;
+}
+/* Keyframes for a natural bounce */
+@keyframes pic3Bounce {
+    0%   { transform: translateY(0); }
+    10%  { transform: translateY(-22px); }
+    30%  { transform: translateY(0); }
+    50%  { transform: translateY(-10px); }
+    70%  { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}
+
+/* Pause on hover/focus for better control */
+#pic3:hover,
+#pic3:focus {
+    animation-play-state: paused;
+    transform: translateY(-6px);
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    #pic3 {
+        animation: none !important;
+        transform: none !important;
+    }
 }
 #p3{
     border:white dotted 2px;
@@ -277,8 +304,8 @@ p{
         color: #653269;
     }
     h3{
-    margin: 10px, auto;
-    padding: 0;
+    margin: 10px auto;
+    padding: 5px;
     width: 100%;
     }
     }
