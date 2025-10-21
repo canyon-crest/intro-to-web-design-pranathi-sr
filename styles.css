@@ -7,13 +7,13 @@ body {
 #container{
     width: 1000px;
     margin: 0 auto;
-    background-color: #f8bdde;
+    background-color: #ffbde0;
     padding: 40px;
     border-left: #d875df solid 3px;
     border-right: #d875df solid 3px;
 }
 h1{
-    background-color: #793c7e;
+    background-color: #a869ad;
     border: #fff, solid, 3px;
     color: #fff;
     border-radius: 15px;
@@ -29,10 +29,14 @@ h2{
     font-style: italic;
 }
 h3{
-    border-left: double 20px #653269;
-    border-radius: 30px;
-    padding-left: 15px;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: #a869ad;
+    border: 3px, solid, #f895ff;
+    color: white;
+    border-radius: 15px;
+    padding: 10px;
+    padding-left: 20px;
+    width: 25%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 p{
     line-height: 2.2em;
@@ -66,6 +70,11 @@ h3:hover{
 #pic1{
     width: 200px;
     margin-right: 20px;
+}
+#p1{
+    padding: 30px;
+    padding-left: 30px;
+    background-color: rgb(255, 180, 240);
 }
 #pic2{
     width:170px;
@@ -102,27 +111,36 @@ h3:hover{
     background-color: rgb(252, 152, 255);
 }
 #sidebar{
-    background-color: black;
+    background-color: rgb(201, 9, 105);
     color: white;
-    width: 225px;
+    width: 300px;
     float:right;
     border: 3px solid #ffe1f4;
     border-radius: 15px;
     margin: 15px;
-    margin-top:55px;
+    margin-top:50px;
     line-height: 2.25em;
     padding-left: 15px;
-    padding-right: 15px;
+
 }
 #sidebar h3{
-    width: 125px;
-    background: none;
+    width: 100px;
+    background: white;
+    color: #a869ad;
+    margin: none;
     text-decoration: underline;
     border: none;
 }
+#sidebar ul{
+    color: white;
+    margin-top: none;
+    border:none;
+    padding-right: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 @media (max-width: 1200px){
     #container{
-        background-color: pink;
+        background-color: #fd97ce;
         width:800px;
     }
 }
@@ -136,14 +154,14 @@ h3:hover{
         border: none;
     
 }
-body,h1,h2,h3,p,div{
-    background-color: pink !important;
+    body,h1,h2,h3,p,div{
+    background-color: #fd97ce !important;
 }
-body{
+    body{
     margin: 20px;
 }
 #sidebar h3{
-    color: black;
+    color: #653269;
 }
 p{
     text-align: justify;
@@ -157,12 +175,14 @@ p{
         border:none;
         width: 100%;
         margin: none;
-    }
-    #p2, #p3{
-        border: none;
         padding: none;
-        margin: none;
+    }
+    #p1, #p2, #p3{
+        border: 0;
+        padding: 0;
+        margin: 0;
         background: none;
+        color: #653269;
     }
     h1{
         color: #653269;
@@ -172,6 +192,8 @@ p{
         color: #653269;
     }
     h3{
-        margin: 10px, auto;
+    margin: 10px, auto;
+    padding: 0;
+    width: 100%;
     }
     }
